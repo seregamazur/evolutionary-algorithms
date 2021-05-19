@@ -24,7 +24,7 @@ public class Individual {
     }
 
     public double getFx() {
-        return Math.pow(-(2 * Math.pow(getValue(), 2) - 5 * getValue() + 13), 2) / 256;
+        return (-1.0 / 256.0 * Math.pow(2 * Math.pow(getValue(), 2) - 5 * getValue() + 13, 2));
     }
 
     public double getFnorm(Population population) {

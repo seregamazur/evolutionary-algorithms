@@ -18,10 +18,12 @@ public class HollandGeneticAlgorithm {
     public void runAlgorithm(int populationSize) {
         Population population = new Population(populationSize, true);
         printInfo(population);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 501; i++) {
             population = enhancePopulation(population);
-            System.out.printf("Generation #%d\n", i);
-            printInfo(population);
+            if (i == 500) {
+				System.out.printf("Generation #%d\n", i);
+				printInfo(population);
+            }
         }
         System.out.println("The fittest gen: " + population.getFittest());
     }
